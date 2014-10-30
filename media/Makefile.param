@@ -1,0 +1,4 @@
+
+INCS += -I$(PROJECT_DIR)/media/inc
+
+SRCS += $(wildcard $(PROJECT_DIR)/media/*.c)

@@ -1,0 +1,23 @@
+
+export CROSS:= arm-hisiv100nptl-linux-
+export CC:=$(CROSS)gcc
+export AR:=$(CROSS)ar
+export STRIP:=$(CROSS)strip
+export CFLAGS:= -g -Wall
+export PROJECT_DIR=.
+export BIN_DIR=.
+export INCS=
+export SRCS=
+export SDK_PATH:=/home/yan/work/Hi3518_SDK_V1.0.5.0
+export SDK_LIBS=
+
+SDK_LIBS += $(SDK_PATH)/mpp/lib/libmpi.a \
+			$(SDK_PATH)/mpp/lib/libaec.a \
+			$(SDK_PATH)/mpp/lib/libanr.a \
+			$(SDK_PATH)/mpp/lib/libVoiceEngine.a \
+			$(SDK_PATH)/mpp/lib/libtde.a \
+			$(SDK_PATH)/mpp/lib/libisp.a \
+			$(SDK_PATH)/mpp/lib/libresampler.a
+
+include media/Makefile.param
+include core/Makefile.param
